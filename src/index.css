@@ -1,0 +1,61 @@
+/* Center the entire game container vertically and horizontally */
+.game-container {
+  display: grid;
+  height: 100vh; /* Full viewport height */
+  place-items: center; /* Centers content both vertically and horizontally */
+  background-color: #f0f0f0; /* Optional: light background */
+}
+
+/* Center the heading and share button */
+.game-container > * {
+  text-align: center;
+}
+
+/* Style the Tic Tac Toe board grid */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px); /* 3 columns */
+  grid-template-rows: repeat(3, 120px);    /* 3 rows */
+  gap: 10px; /* Space between buttons */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 0 auto;
+}
+
+/* Style the buttons inside the grid */
+.game-board button {
+  width: 120px;
+  height: 120px;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background-color: #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.game-board button:hover:not(:disabled) {
+  background-color: #d0d0d0;
+}
+
+.game-board button:disabled {
+  cursor: not-allowed;
+  background-color: #f9f9f9;
+  color: #999;
+}
+
+/* Optional: Center the reset button and add spacing */
+.reset-button {
+  display: block;
+  margin: 30px auto 0 auto;
+  padding: 12px 32px;
+  font-size: 20px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
